@@ -1,0 +1,1 @@
+import{j as r}from"./index-DyhMd5_v.js";import{F as t}from"./FranchiseWalletCommission-ScUBu2RQ.js";import"./download-DkJoUCvs.js";import"./arrow-down-right-Br_kLOng.js";import"./arrow-up-right-b2QtmHRH.js";const e=()=>r.jsx(t,{});export{e as default};

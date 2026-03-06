@@ -1,0 +1,1 @@
+import{j as r}from"./index-DyhMd5_v.js";import{F as o}from"./FranchisePerformanceBoard-D69wMIwM.js";import"./medal-GUHu1Uch.js";import"./arrow-up-Cdo9ao-n.js";import"./arrow-down-DIdnN_0t.js";const i=()=>r.jsx(o,{});export{i as default};
