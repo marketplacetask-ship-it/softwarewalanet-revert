@@ -1,0 +1,38 @@
+name: Software Vala Pipeline
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 20
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build Project
+        run: npm run build
+
+      - name: Deploy to VPS
+        uses: appleboy/ssh-action@v1
+        with:
+          host: YOUR_SERVER_IP
+          username: root
+          key: ${{ secrets.SSH_KEY }}
+          script: |
+            cd /root/softwarewalanet-revert
+            git pull
+            npm install
+            npm run build
+            pm2 restart all
